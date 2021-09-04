@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Goflex | Table </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <link href="assets/css/vendor.min.css" rel="stylesheet" />
+  <link href="assets/css/app.min.css" rel="stylesheet" />
+
+
+  <link href="assets/plugins/datatables.net-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" />
+  <link href="assets/plugins/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css" rel="stylesheet" />
+  <link href="assets/plugins/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css" rel="stylesheet" />
+  <link href="assets/plugins/bootstrap-table/dist/bootstrap-table.min.css" rel="stylesheet" />
+
+</head>
+
+<body data-bs-spy='scroll' data-bs-target='#sidebar-bootstrap' data-bs-offset='200'>
+
+  <div id="app" class="app">
+
+    <div id="header" class="app-header">
+
+      <div class="mobile-toggler">
+        <button type="button" class="menu-toggler" data-toggle="sidebar-mobile">
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+
+
+      <div class="brand">
+        <div class="desktop-toggler">
+          <button type="button" class="menu-toggler" data-toggle="sidebar-minify">
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+        </div>
+        <a href="#" class="brand-logo">
+          <img src="assets/img/logo.png" alt="" height="20" />
+        </a>
+      </div>
+
+
+      <div class="menu">
+        <form class="menu-search" method="POST" name="header_search_form">
+          <div class="menu-search-icon"><i class="fa fa-search"></i></div>
+          <div class="menu-search-input">
+            <input type="text" class="form-control" placeholder="Search menu..." />
+          </div>
+        </form>
+        <div class="menu-item dropdown">
+          <a href="#" data-bs-toggle="dropdown" data-bs-display="static" class="menu-link">
+            <div class="menu-icon"><i class="fa fa-bell nav-icon"></i></div>
+            <div class="menu-label">3</div>
+          </a>
+          <div class="dropdown-menu dropdown-menu-end dropdown-notification">
+            <h6 class="dropdown-header text-gray-900 mb-1">Notifications</h6>
+            <a href="#" class="dropdown-notification-item">
+              <div class="dropdown-notification-icon">
+                <i class="fa fa-receipt fa-lg fa-fw text-success"></i>
+              </div>
+              <div class="dropdown-notification-info">
+                <div class="title">Your store has a new order for 2 items totaling $1,299.00</div>
+                <div class="time">just now</div>
+              </div>
+              <div class="dropdown-notification-arrow">
+                <i class="fa fa-chevron-right"></i>
+              </div>
+            </a>
+            <a href="#" class="dropdown-notification-item">
+              <div class="dropdown-notification-icon">
+                <i class="far fa-user-circle fa-lg fa-fw text-muted"></i>
+              </div>
+              <div class="dropdown-notification-info">
+                <div class="title">3 new customer account is created</div>
+                <div class="time">2 minutes ago</div>
+              </div>
+              <div class="dropdown-notification-arrow">
+                <i class="fa fa-chevron-right"></i>
+              </div>
+            </a>
+            <a href="#" class="dropdown-notification-item">
+              <div class="dropdown-notification-icon">
+                <img src="assets/img/icon/android.svg" alt="" width="26" />
+              </div>
+              <div class="dropdown-notification-info">
+                <div class="title">Your android application has been approved</div>
+                <div class="time">5 minutes ago</div>
+              </div>
+              <div class="dropdown-notification-arrow">
+                <i class="fa fa-chevron-right"></i>
+              </div>
+            </a>
+            <a href="#" class="dropdown-notification-item">
+              <div class="dropdown-notification-icon">
+                <img src="assets/img/icon/paypal.svg" alt="" width="26" />
+              </div>
+              <div class="dropdown-notification-info">
+                <div class="title">Paypal payment method has been enabled for your store</div>
+                <div class="time">10 minutes ago</div>
+              </div>
+              <div class="dropdown-notification-arrow">
+                <i class="fa fa-chevron-right"></i>
+              </div>
+            </a>
+            <div class="p-2 text-center mb-n1">
+              <a href="#" class="text-gray-800 text-decoration-none">See all</a>
+            </div>
+          </div>
+        </div>
+        <div class="menu-item dropdown">
+          <a href="#" data-bs-toggle="dropdown" data-bs-display="static" class="menu-link">
+            <div class="menu-img online">
+              <img src="assets/img/user/user.jpg" alt="" class="mw-100 mh-100 rounded-circle" />
+            </div>
+            <div class="menu-text"><span class="__cf_email__"
+                data-cfemail="7b081e1a150f131e161e3b1c161a121755181416">[email&#160;protected]</span></div>
+          </a>
+          <div class="dropdown-menu dropdown-menu-end me-lg-3">
+            <a class="dropdown-item d-flex align-items-center" href="#">Edit Profile <i
+                class="fa fa-user-circle fa-fw ms-auto text-gray-400 fs-16px"></i></a>
+            <a class="dropdown-item d-flex align-items-center" href="#">Inbox <i
+                class="fa fa-envelope fa-fw ms-auto text-gray-400 fs-16px"></i></a>
+            <a class="dropdown-item d-flex align-items-center" href="#">Calendar <i
+                class="fa fa-calendar-alt fa-fw ms-auto text-gray-400 fs-16px"></i></a>
+            <a class="dropdown-item d-flex align-items-center" href="#">Setting <i
+                class="fa fa-wrench fa-fw ms-auto text-gray-400 fs-16px"></i></a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item d-flex align-items-center" href="#">Log Out <i
+                class="fa fa-toggle-off fa-fw ms-auto text-gray-400 fs-16px"></i></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+   <div id="sidebar" class="app-sidebar">
+
+			<div class="app-sidebar-content" data-scrollbar="true" data-height="100%">
+
+				<div class="menu">
+					<div class="menu-header">Navigation</div>
+					<div class="menu-item active">
+						<a href="index.html" class="menu-link">
+							<span class="menu-icon"><i class="fa fa-laptop"></i></span>
+							<span class="menu-text">Get Started</span>
+						</a>
+					</div>
+					<div class="menu-item">
+						<a href="dashboard_page.html" class="menu-link">
+							<span class="menu-icon"><i class="fa fa-chart-pie"></i></span>
+							<span class="menu-text">Dashboard</span>
+						</a>
+					</div>
+					<div class="menu-item has-sub">
+						<a href="#" class="menu-link">
+							<span class="menu-icon">
+								<i class="fa fa-envelope"></i>
+								<span class="menu-icon-label">6</span>
+							</span>
+							<span class="menu-text">Email</span>
+							<span class="menu-caret"><b class="caret"></b></span>
+						</a>
+						<div class="menu-submenu">
+							<div class="menu-item">
+								<a href="email_inbox.html" class="menu-link">
+									<span class="menu-text">Inbox</span>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="email_compose.html" class="menu-link">
+									<span class="menu-text">Compose</span>
+								</a>
+							</div>
+							<div class="menu-item">
+								<a href="email_detail.html" class="menu-link">
+									<span class="menu-text">Detail</span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="menu-divider"></div>
+					<div class="menu-header">Payments</div>
+					<div class="menu-item">
+						<a href="transaction_page.html" class="menu-link">
+							<span class="menu-icon"><i class="fa fa-qrcode"></i></span>
+							<span class="menu-text">Transactions</span>
+						</a>
+					</div>
+					<div class="menu-item has-sub">
+						<a href="customer_page.html" class="menu-link">
+							<span class="menu-icon"><i class="fa fa-heart"></i></span>
+							<span class="menu-text">Customers</span>
+							
+						</a>
+						
+					</div>
+          <div class="menu-item has-sub">
+						<a href="customer_details.html" class="menu-link">
+							<span class="menu-icon"><i class="fa fa-heart"></i></span>
+							<span class="menu-text">Customer Detail</span>
+							
+						</a>
+						
+					</div>
+					<div class="menu-item has-sub">
+						<a href="payout_page.html" class="menu-link">
+							<span class="menu-icon"><i class="fa fa-file-alt"></i></span>
+							<span class="menu-text">Payouts</span>
+							
+						</a>
+						
+					</div>
+					<div class="menu-item has-sub">
+						<a href="package_page.html" class="menu-link">
+							<span class="menu-icon"><i class="fa fa-table"></i></span>
+							<span class="menu-text">Packages</span>
+							
+						</a>
+						
+					</div>
+					
+					
+					
+					
+					
+				</div>
+
+			</div>
+
+
+			<button class="app-sidebar-mobile-backdrop" data-dismiss="sidebar-mobile"></button>
+
+		</div>
+
+    <div id="content" class="app-content">
+
+      <div class="container">
+
+        <div class="row justify-content-center">
+
+          <div class="col-xl-12">
+
+            <div class="row">
+
+              <div class="col-xl-12">
+               
+                <h1 class="page-header">
+                  Packages  
+                </h1>
+                <hr class="mb-4" />
+                
+                   
+                    <div class="d-flex align-items-center mb-3">
+                    <div>
+                 
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Search Pages">
+                    </div>
+                    <div class="ms-auto">
+                    <a href="#" class="btn btn-primary"><i class="fa fa-plus-circle fa-fw"></i> New Purchase</a>
+                    
+                    </div>
+                    
+                </div>
+                <div id="datatable" class="mb-5">
+                 
+                  <div class="caro">
+                    <div class="card-body">
+                      <table id="datatableDefault" class="table text-nowrap w-200" >
+                        <thead>
+                          <tr>
+                            <th width="6%">#</th>
+                            <th width="45%">Name</th>
+                            <th width="25%">Type</th>
+                            
+                            <th width="20%">Amount</th>
+                            <th width="10%">Date Created</th>
+                           
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><input class="form-check-input" type="radio" value="" id="defaultRadio1" disabled /></td>
+                            <td>Regular Tickets</td>
+                            <td>Payment</td>
+                            <td>$500 000</td>
+                            <td>Apr 10, 2021</td>
+                          </tr>
+                          <tr>
+                            <td><input class="form-check-input" type="radio" value="" id="defaultRadio1" disabled /></td>
+                            <td>Premium Membership</td>
+                            <td>Subscription</td>
+                            <td>Open</td>
+                            <td>Apr 2, 2019</td>
+                          </tr>
+                            <tr>
+                            <td><input class="form-check-input" type="radio" value="" id="defaultRadio1" disabled /></td>
+                            <td>Corporation Levi</td>
+                            <td>Payment</td>
+                            <td>$10,000 00</td>
+                            <td>Mar 12, 2019</td>
+                          </tr>
+                           <tr>
+                            <td><input class="form-check-input" type="radio" value="" id="defaultRadio1" disabled /></td>
+                            <td>Tessteeerrrr</td>
+                            <td>Payment</td>
+                            <td>Open</td>
+                            <td>Feb 12, 2018</td>
+                          </tr>
+                            <tr>
+                            <td><input class="form-check-input" type="radio" value="" id="defaultRadio1" disabled /></td>
+                            <td>VVIP</td>
+                            <td>Subscription</td>
+                            <td>Open</td>
+                            <td>Jan 24, 2020</td>
+                          </tr>
+                           <tr>
+                            <td><input class="form-check-input" type="radio" value="" id="defaultRadio1" disabled /></td>
+                            <td>Newsletter</td>
+                            <td>Subscription</td>
+                            <td>$10,000 00</td>
+                            <td>Mar 12, 2019</td>
+                          </tr>
+                            <tr>
+                            <td><input class="form-check-input" type="radio" value="" id="defaultRadio1" disabled /></td>
+                            <td>VIP Tickets</td>
+                            <td>Payment</td>
+                            <td>$80,000 00</td>
+                            <td>Jan 23, 2021</td>
+                          </tr>
+                          <tr>
+                            <td><input class="form-check-input" type="radio" value="" id="defaultRadio1" disabled /></td>
+                            <td>Shared Income</td>
+                            <td>Subscription</td>
+                            <td>$900 000 00</td>
+                            <td>Jun 16, 2020</td>
+                          </tr>
+                           <tr>
+                            <td><input class="form-check-input" type="radio" value="" id="defaultRadio1" disabled /></td>
+                            <td>Now Now</td>
+                            <td>Payment</td>
+                            <td>$120, 000.00</td>
+                            <td>Jan 22, 2021</td>
+                          </tr>
+                           <tr>
+                            <td><input class="form-check-input" type="radio" value="" id="defaultRadio1" disabled /></td>
+                            <td>Now Now</td>
+                            <td>Payment</td>
+                            <td>$120, 000.00</td>
+                            <td>Jan 22, 2021</td>
+                          </tr>
+                            <tr>
+                            <td><input class="form-check-input" type="radio" value="" id="defaultRadio1" disabled /></td>
+                            <td>Now Now</td>
+                            <td>Payment</td>
+                            <td>$120, 000.00</td>
+                            <td>Jan 22, 2021</td>
+                          </tr>
+                            <tr>
+                            <td><input class="form-check-input" type="radio" value="" id="defaultRadio1" disabled /></td>
+                            <td>Now Now</td>
+                            <td>Payment</td>
+                            <td>$120, 000.00</td>
+                            <td>Jan 22, 2021</td>
+                          </tr>
+                            <tr>
+                            <td><input class="form-check-input" type="radio" value="" id="defaultRadio1" disabled /></td>
+                            <td>Now Now</td>
+                            <td>Payment</td>
+                            <td>$120, 000.00</td>
+                            <td>Jan 22, 2021</td>
+                          </tr>
+                        <tr>
+                            <td><input class="form-check-input" type="radio" value="" id="defaultRadio1" disabled /></td>
+                            <td>Now Now</td>
+                            <td>Payment</td>
+                            <td>$120, 000.00</td>
+                            <td>Jan 22, 2021</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <div class="d-md-flex align-items-center">
+<div class="me-md-auto text-md-left text-center mb-2 mb-md-0">
+Showing 1 to 10 of 57 entries
+</div>
+<ul class="pagination mb-0 justify-content-center">
+<li class="page-item disabled"><a class="page-link">Previous</a></li>
+<li class="page-item active"><a class="page-link" href="#">1</a></li>
+<li class="page-item "><a class="page-link" href="#">2</a></li>
+<li class="page-item"><a class="page-link" href="#">3</a></li>
+<!-- <li class="page-item"><a class="page-link" href="#">4</a></li>
+<li class="page-item"><a class="page-link" href="#">5</a></li>
+<li class="page-item"><a class="page-link" href="#">6</a></li> -->
+<li class="page-item"><a class="page-link" href="#">Next</a></li>
+</ul>
+</div>
+                 </div>   
+                </div>
+              </div>
+
+
+              <!-- <div class="col-xl-3">
+
+                <nav id="sidebar-bootstrap" class="navbar navbar-sticky d-none d-xl-block">
+                  <nav class="nav">
+                    <a class="nav-link" href="#" data-toggle="scroll-to">Dashboard</a>
+                    <a class="nav-link" href="#" data-toggle="scroll-to">Transaction Table</a>
+                  </nav>
+                </nav>
+
+              </div> -->
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <a href="#" data-click="scroll-top" class="btn-scroll-top fade"><i class="fa fa-arrow-up"></i></a>
+
+  </div>
+
+
+  <script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script src="assets/js/vendor.min.js" type="49f7e61f7fa1abe268640998-text/javascript"></script>
+  <script src="assets/js/app.min.js" type="49f7e61f7fa1abe268640998-text/javascript"></script>
+
+
+  <script src="assets/plugins/highlight.js/highlight.min.js" type="49f7e61f7fa1abe268640998-text/javascript"></script>
+  <script src="assets/js/demo/highlightjs.demo.js" type="49f7e61f7fa1abe268640998-text/javascript"></script>
+  <script src="assets/plugins/datatables.net/js/jquery.dataTables.min.js"
+    type="49f7e61f7fa1abe268640998-text/javascript"></script>
+  <script src="assets/plugins/datatables.net-bs4/js/dataTables.bootstrap4.min.js"
+    type="49f7e61f7fa1abe268640998-text/javascript"></script>
+  <script src="assets/plugins/datatables.net-buttons/js/dataTables.buttons.min.js"
+    type="49f7e61f7fa1abe268640998-text/javascript"></script>
+  <script src="assets/plugins/datatables.net-buttons/js/buttons.colVis.min.js"
+    type="49f7e61f7fa1abe268640998-text/javascript"></script>
+  <script src="assets/plugins/datatables.net-buttons/js/buttons.flash.min.js"
+    type="49f7e61f7fa1abe268640998-text/javascript"></script>
+  <script src="assets/plugins/datatables.net-buttons/js/buttons.html5.min.js"
+    type="49f7e61f7fa1abe268640998-text/javascript"></script>
+  <script src="assets/plugins/datatables.net-buttons/js/buttons.print.min.js"
+    type="49f7e61f7fa1abe268640998-text/javascript"></script>
+  <script src="assets/plugins/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js"
+    type="49f7e61f7fa1abe268640998-text/javascript"></script>
+  <script src="assets/plugins/datatables.net-responsive/js/dataTables.responsive.min.js"
+    type="49f7e61f7fa1abe268640998-text/javascript"></script>
+  <script src="assets/plugins/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"
+    type="49f7e61f7fa1abe268640998-text/javascript"></script>
+  <script src="assets/plugins/bootstrap-table/dist/bootstrap-table.min.js"
+    type="49f7e61f7fa1abe268640998-text/javascript"></script>
+  <script src="assets/js/demo/table-plugins.demo.js" type="49f7e61f7fa1abe268640998-text/javascript"></script>
+
+  <script type="49f7e61f7fa1abe268640998-text/javascript">
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-53034621-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+  <script src="../cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js"
+    data-cf-settings="49f7e61f7fa1abe268640998-|49" defer=""></script>
+  <script defer src="../../static.cloudflareinsights.com/beacon.min.js"
+    data-cf-beacon='{"rayId":"687d01506a79fa5c","version":"2021.8.1","r":1,"token":"4db8c6ef997743fda032d4f73cfeff63","si":10}'></script>
+</body>
+
+</html>
